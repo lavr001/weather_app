@@ -5,7 +5,7 @@ const search_weather = () => {
   let city = Elements.searched_city.value.trim();
   if (city) {
     Http
-      .fetchData(city)
+      .fetch_data(city)
       .then(response => {
         if (response.cod === 200) {
           console.log(response);
@@ -15,6 +15,6 @@ const search_weather = () => {
       })
       .catch(e => console.log(e));
   }
-};
+}
 
 Elements.search_button.addEventListener('click', search_weather);
