@@ -22,7 +22,6 @@ const search_weather = () => {
 }
 
 let update_weather = weather_data => {
-  console.log(weather_data);
   Elements.weather_city.textContent = weather_data.name;
   Elements.weather_description.textContent = weather_data.weather[0].description;
   Elements.weather_temperature.textContent = weather_data.main.temp + ' F';
