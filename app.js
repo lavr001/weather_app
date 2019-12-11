@@ -6,6 +6,7 @@ const search_weather = () => {
   if (city) {
     Elements.loading_text.classList.add('show');
     Elements.weather_box.classList.remove('show');
+    
     Http
       .fetch_data(city)
       .then(response => {
